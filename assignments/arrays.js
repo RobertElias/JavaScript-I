@@ -340,7 +340,6 @@ console.log("The last car make is: " + lastCar.car_make + " Model is: " + lastCa
 //Sort all the car model names into alphabetical order and log the results in the console
 // let carModels = [];
 // let carModelsSorted =[];
-
 // console.log();
 
 let carModels = inventory.map(function (carModelsSorted) {
@@ -362,8 +361,18 @@ console.log(carModels);
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. 
 //Create a new array from the dealer data containing only the car years and log the result in the console.
+// let carYears = [];
+// console.log();
+
 let carYears = [];
-console.log();
+for(let i = 0; i<inventory.length; i++){
+  if(!carYears.includes(inventory[i].car_year)){
+    carYears.push(inventory[i].car_year);
+  }
+}
+
+carYears.sort();
+console.log(carYears);
 
 
 
